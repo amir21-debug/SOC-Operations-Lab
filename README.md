@@ -22,10 +22,16 @@ Microsoft Sentinel
 
 Simulated MITRE ATT&CK techniques:
 
-- T1059.001 PowerShell
-- T1087 Account Discovery
-- T1136 Create Account
-- T1053 Scheduled Task
+1: T1059.001 PowerShell
+2: T1087 Account Discovery 
+3: T1136 Create Local User 
+4: T1053 Scheduled Task
+5: T1112 Registry Modification
+6: T1021 Remote Desktop
+7: T1059 Encoded PowerShell
+8: T1016 Network Discovery 
+9: T1082 System Discovery
+10: T1036 Masquerading 
 
 
 ## Detection Engineering
