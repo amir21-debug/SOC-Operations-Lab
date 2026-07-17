@@ -12,6 +12,6 @@ schtasks /create /tn "T1053_005_OnStartup" /sc onstart /ru system /tr "cmd.exe /
 
 Cleanup Commands:
 
-schtasks /delete /tn "T1053_005_OnLogon" /f
+schtasks /delete /tn "T1053_005_OnLogon" /f >null 2>&1
 
-schtasks /delete /tn "T1053_005_OnStartup" /f
+schtasks /delete /tn "T1053_005_OnStartup" /f >null 2>&1
