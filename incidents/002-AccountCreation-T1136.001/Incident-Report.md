@@ -55,7 +55,7 @@ Microsoft Sentinel
 
 The detection rule identifies Windows Security events associated with local account creation.
 
-The analytics rule triggers when Event ID 4720 is detected.
+The analytics rule triggers when Event ID 4720 or 4732 is detected.
 
 ## KQL Query
 
