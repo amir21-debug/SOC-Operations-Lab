@@ -1,0 +1,29 @@
+Atomic Red Team Test
+
+MITRE ATT&CK Technique:
+T1136.001 - Create Account: Local Account
+
+Atomic Test:
+T1136.001-8 Create a new Windows admin user
+
+Command Executed:
+
+Invoke-AtomicTest T1136.001 -TestNumbers 8 -Path "C:\Users\azureuser\Desktop\AtomicRedTeam\atomics"
+
+
+Atomic Test Execution:
+
+The Atomic Red Team test successfully executed the following commands:
+
+net user /add "T1136.001_Admin" "T1136_pass"
+
+net localgroup administrators "T1136.001_Admin" /add
+
+
+Result:
+
+A new local administrator account named:
+
+T1136.001_Admin
+
+was successfully created on the Windows endpoint.
