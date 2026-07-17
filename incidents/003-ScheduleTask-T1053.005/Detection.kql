@@ -1,0 +1,5 @@
+Event
+| where Source == "Microsoft-Windows-Sysmon"
+| where EventID == 1
+| where RenderedDescription has "schtasks"
+| sort by TimeGenerated desc
