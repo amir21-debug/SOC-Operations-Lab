@@ -1,0 +1,4 @@
+Event 
+| where EventID == 4720 or EventID == 4732
+| where RenderedDescription has "A user account was created"
+| sort by TimeGenerated desc
