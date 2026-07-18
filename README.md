@@ -17,7 +17,8 @@ Log Analytics
 ↓
 Microsoft Sentinel
 
-##*Attack Lifecycle*
+
+##Attack Lifecycle
 
 Attacker executes PowerShell
           ↓
