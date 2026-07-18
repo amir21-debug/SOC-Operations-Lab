@@ -25,7 +25,7 @@ Simulated MITRE ATT&CK techniques:
 1: T1059.001 PowerShell
 2: T1136 Create Local User 
 3: T1053 Scheduled Task
-4: T1112 Registry Modification
+4: T1546 Image File Execution Option
 5: T1021 Remote Desktop
 
 
