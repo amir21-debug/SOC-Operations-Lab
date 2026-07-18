@@ -1,0 +1,35 @@
+Technique 1:
+T1053.005 - Scheduled Task
+
+Atomic Test:
+T1053.005-1 Scheduled Task Startup Script
+
+Command Executed:
+
+Invoke-AtomicTest T1053.005 -TestNumbers 1 -Path "C:\Users\azureuser\Desktop\AtomicRedTeam\atomics"
+
+------------------------------------------------------------
+
+Technique 2:
+T1546.012 - Image File Execution Options (IFEO) Injection
+
+Atomic Test:
+T1546.012-1 IFEO Injection
+
+Command Executed:
+
+Invoke-AtomicTest T1546.012 -TestNumbers 1 -Path "C:\Users\azureuser\Desktop\AtomicRedTeam\atomics"
+
+------------------------------------------------------------
+
+Attack Chain
+
+User Logon
+        ↓
+Scheduled Task Executes
+        ↓
+calc.exe Launch Attempt
+        ↓
+IFEO Registry Intercepts Execution
+        ↓
+cmd.exe Executes Instead
