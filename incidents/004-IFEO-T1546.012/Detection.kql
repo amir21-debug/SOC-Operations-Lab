@@ -1,6 +1,7 @@
 Event
 | where Source == "Microsoft-Windows-Sysmon"
-| where EventID == 13
-| where RenderedDescription has "Image File Execution Options"
-| project TimeGenerated, Computer, UserName, RenderedDescription, EventID 
+| where (EventID == 1 and RenderedDescription has "schtasks.exe")
+    or (EventID == 13 and RenderedDescription has "Image File Execution Options")
+| project TimeGenerated, Computer, UserName, EventID, RenderedDescription
 | sort by TimeGenerated desc
+
