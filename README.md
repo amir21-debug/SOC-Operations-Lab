@@ -17,6 +17,17 @@ Log Analytics
 ↓
 Microsoft Sentinel
 
+##*Attack Lifecycle*
+
+Attacker executes PowerShell
+          ↓
+Creates a local administrator account
+          ↓
+Uses RDP to remotely access the system
+          ↓
+Creates a scheduled task for persistence
+          ↓
+Abuses IFEO registry injection to hijack execution
 
 ## Attack Simulation
 
@@ -29,14 +40,16 @@ Simulated MITRE ATT&CK techniques:
 5: T1021 Remote Desktop
 
 
+
 ## Detection Engineering
 
 Created KQL detections for:
 
 - Suspicious PowerShell
-- Failed authentication
 - Account creation
-- Registry modification
+- Scheduled Task
+- Image File Execution Option
+- Remote Desktop
 
 
 ## Tools
