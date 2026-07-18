@@ -1,0 +1,6 @@
+Event
+| where Source == "Microsoft-Windows-Sysmon"
+| where EventID == 13
+| where RenderedDescription has "Image File Execution Options"
+| project TimeGenerated, Computer, UserName, RenderedDescription, EventID 
+| sort by TimeGenerated desc
