@@ -34,7 +34,7 @@ echo "RDP connection established"
 * Windows generates Remote Desktop logon events.
 * Microsoft Sentinel ingests the telemetry.
 * The custom analytics rule generates an alert for investigation.
-
+-----
 ## Validation
 
 The RDP connection was successfully established from the VirtualBox attacker machine to the Azure Windows VM.
