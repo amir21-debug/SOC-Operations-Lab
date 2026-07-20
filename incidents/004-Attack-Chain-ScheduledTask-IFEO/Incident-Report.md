@@ -37,8 +37,9 @@ Processes:
 - calc.exe (intercepted through IFEO)
 
 Registry Path:
-
+```cmd
 HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\calc.exe" /v Debugger /d "C:\Windows\System32\cmd.exe
+```
 
 Event Sources:
 
