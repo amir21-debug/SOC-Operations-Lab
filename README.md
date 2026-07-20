@@ -121,6 +121,7 @@ SOC-Operations-Lab/
 │
 ├── README.md
 ├── architecture/
+│   ├── SOC-Lab-Architecture.pdf/
 ├── incidents/
 │   ├── 001-PowerShell-T1059.001/
 │   ├── 002-Create-Local-User-T1136.001/
@@ -134,7 +135,6 @@ SOC-Operations-Lab/
 │   ├── 003-Remote-Desktop-Rule.png/
 │   ├── 004-ScheduleTask-Rule.png/
 │   └── 005-AAttack-Chain-ScheduledTask-IFEO-Rule/
-├── workbooks/
 ```
 
 ---
