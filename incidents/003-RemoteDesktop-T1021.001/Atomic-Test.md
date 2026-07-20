@@ -1,0 +1,48 @@
+# Atomic Red Team Simulation
+
+## Technique
+
+**T1021.001 – Remote Desktop Protocol (RDP)**
+
+## Objective
+
+Simulate an attacker remotely accessing a compromised Windows system using Remote Desktop Protocol (RDP).
+
+## Test Environment
+
+**Attacker Machine:** Windows VirtualBox VM
+
+**Target Machine:** Azure Windows Server VM
+
+## Commands Executed
+
+```powershell
+$Server = "<Azure VM Public IP>"
+$User = "<Local Administrator Account>"
+$Password = "<Password Redacted>"
+
+cmdkey /generic:TERMSRV/$Server /user:$User /pass:$Password
+mstsc /v:$Server
+
+echo "RDP connection established"
+```
+
+## Expected Behavior
+
+* Credentials are stored using `cmdkey`.
+* Remote Desktop Connection (`mstsc.exe`) initiates an RDP session to the Azure VM.
+* Windows generates Remote Desktop logon events.
+* Microsoft Sentinel ingests the telemetry.
+* The custom analytics rule generates an alert for investigation.
+
+## Validation
+
+The RDP connection was successfully established from the VirtualBox attacker machine to the Azure Windows VM.
+
+Microsoft Sentinel successfully detected the activity and generated an alert using the custom analytics rule.
+
+
+
+## Cleanup Commands
+
+cmdkey /delete:TERMSRV/$Server
