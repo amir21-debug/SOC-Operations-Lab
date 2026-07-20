@@ -1,6 +1,6 @@
 Event
 | where Source == "Microsoft-Windows-Security-Auditing"
-| where EventID in (4624, 4625, 4778, 4779)
-| where RenderedDescription has_any ("Remote Desktop", "RDP", "Terminal Services")
-| project TimeGenerated, Computer,  EventID, RenderedDescription
+| where EventID in (4624, 4625)
+| where RenderedDescription has "Logon Type:\t\t10"
+| project TimeGenerated, Computer, EventID, RenderedDescription
 | sort by TimeGenerated desc
