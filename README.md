@@ -53,7 +53,7 @@ Remote Desktop Access
         ↓
 Scheduled Task Persistence
         ↓
-IFEO Execution Hijacking
+Scheduled Task Persistence + IFEO Execution Hijacking
 ```
 
 This lab demonstrates how multiple MITRE ATT&CK techniques can be chained together to simulate a realistic Windows intrusion, from initial code execution through persistence and remote access.
@@ -68,7 +68,7 @@ This lab demonstrates how multiple MITRE ATT&CK techniques can be chained togeth
 | Create Local Account                          | T1136.001 |
 | Remote Desktop Protocol (RDP)                 | T1021.001 |
 | Scheduled Task                                | T1053.005 |
-| Image File Execution Options (IFEO) Injection | T1546.012 |
+| Image File Execution Options (IFEO) Injection | T1546.012 + T1053.005 |
 
 ---
 
@@ -124,7 +124,7 @@ SOC-Operations-Lab/
 ├── incidents/
 │   ├── 001-PowerShell-T1059.001/
 │   ├── 002-Create-Local-User-T1136.001/
-│   ├── 003-Remote-Desktop-T1021.001/
+│   ├── 003-RemoteDesktop-T1021.001/
 │   ├── 004-Scheduled-Task-T1053.005/
 │   └── 004-Attack-Chain-ScheduledTask-IFEO/
 │
