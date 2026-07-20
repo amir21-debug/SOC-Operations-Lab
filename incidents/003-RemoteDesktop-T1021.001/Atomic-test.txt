@@ -41,6 +41,8 @@ The RDP connection was successfully established from the VirtualBox attacker mac
 
 Microsoft Sentinel successfully detected the activity and generated an alert using the custom analytics rule.
 
+
+
 ## Cleanup Commands
 
 cmdkey /delete:TERMSRV/$Server
