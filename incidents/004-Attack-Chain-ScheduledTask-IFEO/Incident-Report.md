@@ -51,9 +51,12 @@ Event IDs:
 
 ## Detection Logic
 
-Microsoft Sentinel correlated Sysmon process creation events with Sysmon registry modification events occurring on the same endpoint within a 10-minute window.
+## Detection Logic
+Two KQL queries were developed for this scenario:
 
-This correlation detected the creation of a scheduled task followed by an IFEO registry modification, indicating a higher-confidence persistence attack.
+1. **Hunting query (`detection.kql`)** — surfaces any scheduled task creation event (Sysmon Event ID 1, containing `schtasks.exe`) or any IFEO registry modification (Sysmon Event ID 13, containing "Image File Execution Options") independently, for broad visibility during investigation.
+
+2. **Analytics Rule (`analyticalrule.kql`)** — a higher-confidence correlation rule that joins scheduled task creation events with IFEO registry modification events occurring on the same host within a 10-minute window following the task creation. This rule is what triggers an actual Sentinel incident, since it requires both conditions to occur together rather than alerting on either technique in isolation.
 
 ## KQL Query
 
